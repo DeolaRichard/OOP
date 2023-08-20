@@ -60,6 +60,7 @@ class Course:
         value = 0
         for student in self.students:
             value += student.get_grade()
+        return value / len(self.students)
 
 
 # Adding Students to the courses
