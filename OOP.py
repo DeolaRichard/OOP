@@ -53,4 +53,24 @@ class Course:
     def add_student(self, student):
         if len(self.students) <= self.max_students:
             self.students.append(student)
+            return True
+        return False
+
+    def get_average_grade(self):
+        pass
+
+
+# Adding Students to the courses
+s1 = ("Ronald", 17, 95)
+s2 = ("Benita", 19, 98)
+s3 = ("Ayomide", 24, 99)
+s4 = ("Sharon", 22, 92)
+s5 = ("Tofunmi", 20, 90)
+
+course = Course("Science", 3)
+course.add_student(s1)
+course.add_student(s2)
+course.add_student(s3)
+
+
 
