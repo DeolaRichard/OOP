@@ -58,9 +58,8 @@ class Course:
 
     def get_average_grade(self):
         value = 0
-        for students in self.students:
-            value += students
-
+        for student in self.students:
+            value += student.get_grade()
 
 
 # Adding Students to the courses
