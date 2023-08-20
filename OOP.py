@@ -60,16 +60,18 @@ class Course:
         value = 0
         for student in self.students:
             value += student.get_grade()
-        return value / len(self.students)
+
+        return value // len(self.students)
 
 
-# Adding Students to the courses
-s1 = ("Ronald", 17, 95)
-s2 = ("Benita", 19, 98)
-s3 = ("Ayomide", 24, 99)
-s4 = ("Sharon", 22, 92)
-s5 = ("Tofunmi", 20, 90)
+# Creating instances of the Student class
+s1 = Student("Ronald", 17, 95)
+s2 = Student("Benita", 19, 98)
+s3 = Student("Ayomide", 24, 99)
+s4 = Student("Sharon", 22, 92)
+s5 = Student("Tofunmi", 20, 90)
 
+# Creating a course instance and adding students to it
 course = Course("Science", 3)
 course.add_student(s1)
 course.add_student(s2)
@@ -77,4 +79,5 @@ course.add_student(s5)
 course.add_student(s4)
 course.add_student(s3)
 
-print(course.students)
+
+print(course.get_average_grade())
