@@ -92,6 +92,9 @@ class Pet:
     def show(self):
         print("My name is", self.name, "and i am", self.age, "Years old")
 
+    def speak(self):
+        print("I dont know what to say")
+
 
 class Cat(Pet):
     def speak(self):
@@ -104,11 +107,22 @@ class Hen(Pet):
         print("Crow")
 
 
+class Fish(Pet):
+    pass
+
+
 p = Pet("Jack", 16)
 p.show()
+p.speak()
 
 c = Cat("Tom", 20)
 c.show()
+c.speak()
 
 h = Hen("Jerry", 35)
 h.show()
+h.speak()
+
+f = Fish("Octopus", 18)
+f.show()
+f.speak()
