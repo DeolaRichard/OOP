@@ -79,5 +79,26 @@ course.add_student(s5)
 course.add_student(s4)
 course.add_student(s3)
 
-
 print(course.get_average_grade())
+
+
+# Understanding Inheritance
+
+class Pet:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def show(self):
+        print("My name is", {self.name}, "and i am", {self.age}, "Years old")
+
+
+class Cat(Pet):
+    def speak(self):
+        print("Meow")
+
+
+class Hen(Pet):
+
+    def speak(self):
+        print("Crow")
