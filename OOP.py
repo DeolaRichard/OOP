@@ -97,6 +97,10 @@ class Pet:
 
 
 class Cat(Pet):
+    # using super init to get inheritance
+    def __init__(self, name, age, color):
+        super().__init__(self, name, age)
+        self.color = color
     def speak(self):
         print("Meow")
 
