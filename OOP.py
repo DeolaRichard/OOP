@@ -99,10 +99,14 @@ class Pet:
 class Cat(Pet):
     # using super init to get inheritance
     def __init__(self, name, age, color):
-        super().__init__(self, name, age)
+        super().__init__(name, age)
         self.color = color
+
     def speak(self):
         print("Meow")
+
+    def show(self):
+        print("My name is", self.name, "and i am", self.age, "Years old and i am ", self.color)
 
 
 class Hen(Pet):
@@ -119,7 +123,7 @@ p = Pet("Jack", 16)
 p.show()
 p.speak()
 
-c = Cat("Tom", 20)
+c = Cat("Tom", 20, "brown")
 c.show()
 c.speak()
 
@@ -130,3 +134,24 @@ h.speak()
 f = Fish("Octopus", 18)
 f.show()
 f.speak()
+
+
+# CLASS ATTRIBUTES
+# Class attributes are sttributes that are specific to a class.
+# Not to an instance of that class or to an object of that class
+
+class Person:
+    number_of_people = 0
+
+    def __init__(self, name):
+        self.name = name
+
+
+p1 = Person("deola")
+p2 = Person("sharon")
+
+
+Person.number_of_people = 12
+print(p1.number_of_people)
+Person.number_of_people = 19
+print(p2.number_of_people)
