@@ -137,21 +137,28 @@ f.speak()
 
 
 # CLASS ATTRIBUTES
-# Class attributes are sttributes that are specific to a class.
+# Class attributes are attributes that are specific to a class.
 # Not to an instance of that class or to an object of that class
 
 class Person:
-    number_of_people = 0
+    number_of_person = 0
+    GRAVITY = -9.8
 
     def __init__(self, name):
         self.name = name
+        Person.add_person()
+
+    @classmethod
+    def number_of_person(cls):
+        return cls.number_of_person
+
+    @classmethod
+    def add_person(cls):
+        cls.number_of_person += 1
 
 
-p1 = Person("deola")
-p2 = Person("sharon")
-
-
-Person.number_of_people = 12
-print(p1.number_of_people)
-Person.number_of_people = 19
-print(p2.number_of_people)
+# p1 = Person("deola")
+# print(p1.number_of_person)
+# p2 = Person("sharon")
+# print(p2.number_of_person)
+print(Person.number_of_person())
